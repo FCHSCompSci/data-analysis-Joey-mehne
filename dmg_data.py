@@ -25,7 +25,7 @@ fig = plt.figure(dpi=128, figsize=(10, 6))
 plt.plot(dps_char, c='red')
 
 plt.title("Overwatch Hero's Damage per Second", fontsize=24)
-plt.xlabel('', fontsize=16)
+plt.xlabel('Hero Name', fontsize=16)
 plt.ylabel("Damage", fontsize=16)
 plt.tick_params(axis='both', which='major', labelsize=16)
 plt.show()
