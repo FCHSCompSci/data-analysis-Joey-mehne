@@ -18,14 +18,23 @@ with open(filename) as f:
 
     print(dps_char)
 
+    char_nme = []
+    for row in reader:
+        nme = row[0]
+        char_nme.append(nme)
+
+    print(char_nme)
+
     for index, column_header in enumerate(header_row):
         print(index, column_header)
 
 fig = plt.figure(dpi=128, figsize=(10, 6))
-plt.plot(dps_char, c='red')
-
-plt.title("Overwatch Hero's Damage per Second", fontsize=24)
-plt.xlabel('Hero Name', fontsize=16)
-plt.ylabel("Damage", fontsize=16)
-plt.tick_params(axis='both', which='major', labelsize=16)
-plt.show()
+print(len(char_nme))
+print(len(dps_char))
+# plt.scatter(char_nme, dps_char, c='red')
+#
+# plt.title("Overwatch Hero's Damage per Second", fontsize=24)
+# plt.xlabel('Hero Name', fontsize=16)
+# plt.ylabel("Damage", fontsize=16)
+# plt.tick_params(axis='both', which='major', labelsize=16)
+# plt.show()
